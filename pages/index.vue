@@ -42,7 +42,10 @@
               <v-btn class="rounded-xl d-flex align-center btn-no-custom">
                 No 😕
               </v-btn>
-              <v-btn class="rounded-xl d-flex align-center btn-custom">
+              <v-btn
+                class="rounded-xl d-flex align-center btn-custom"
+                @click="goToDeco"
+              >
                 Yes 😉
               </v-btn>
             </div>
@@ -59,6 +62,10 @@ import { ref, onMounted } from "vue";
 const isFirstTextVisible = ref(true);
 const isSecondTextVisible = ref(false);
 const isThirdTextVisible = ref(false);
+const router = useRouter();
+const goToDeco = () => {
+  router.push("/decoration");
+};
 
 onMounted(() => {
   setTimeout(() => {
