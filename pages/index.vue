@@ -13,10 +13,10 @@
       <div><i class="fa fa-heart fa-5x"></i></div>
     </div>
     <v-row justify="center">
-      <v-col cols="12" sm="8" md="6" lg="4" class="d-flex justify-center">
-        <v-card class="text-center card pa-4" elevation="2">
+      <v-col cols="12" sm="8" md="6" lg="4" class="d-flex justify-center" >
+        <v-card class="text-center card d-none d-md-flex flex-column pa-4" elevation="2">
           <v-row class="justify-center">
-            <v-col cols="2">
+            <v-col cols="12" md="2">
               <v-icon size="60" color="#e8b923">mdi-creation-outline</v-icon>
             </v-col>
           </v-row>
@@ -38,7 +38,67 @@
             <v-card-text :class="['text-h5', 'font-weight-bold', 'text-wrap']">
               Do You Want To See What I Made For You??
             </v-card-text>
-            <div class="d-flex ga-5 justify-center py-5">
+            <div class="d-none d-md-flex ga-5 justify-center py-5">
+              <v-btn class="rounded-xl d-flex align-center btn-no-custom">
+                No 😕
+              </v-btn>
+              <v-btn
+                class="rounded-xl d-flex align-center btn-custom"
+                @click="goToDeco"
+              >
+                Yes 😉
+              </v-btn>
+            </div>
+             <div class="d-flex d-md-none ga-5 flex-column justify-center py-5">
+              <v-btn class="rounded-xl d-flex align-center btn-no-custom">
+                No 😕
+              </v-btn>
+              <v-btn
+                class="rounded-xl d-flex align-center btn-custom"
+                @click="goToDeco"
+              >
+                Yes 😉
+              </v-btn>
+            </div>
+          </div>
+        </v-card>
+
+          <v-card class="text-center card-mob d-flex d-md-none mx-10 flex-column pa-4" elevation="2">
+          <v-row class="justify-center">
+            <v-col cols="12" md="2">
+              <v-icon size="60" color="#e8b923">mdi-creation-outline</v-icon>
+            </v-col>
+          </v-row>
+          <v-card-text
+            v-if="isFirstTextVisible"
+            :class="['text-h5', 'font-weight-bold', 'text-wrap', 'slide-up']"
+            class="py-5"
+          >
+            It's Your Special Day Yeyey!
+          </v-card-text>
+          <v-card-text
+            v-else-if="isSecondTextVisible"
+            :class="['text-h5', 'font-weight-bold', 'text-wrap', 'slide-up']"
+            class="py-5"
+          >
+            To Make Something Special For You As You Are Special For Me
+          </v-card-text>
+          <div v-else-if="isThirdTextVisible" :class="'slide-up'">
+            <v-card-text :class="['text-h5', 'font-weight-bold', 'text-wrap']">
+              Do You Want To See What I Made For You??
+            </v-card-text>
+            <div class="d-none d-md-flex ga-5 justify-center py-5">
+              <v-btn class="rounded-xl d-flex align-center btn-no-custom">
+                No 😕
+              </v-btn>
+              <v-btn
+                class="rounded-xl d-flex align-center btn-custom"
+                @click="goToDeco"
+              >
+                Yes 😉
+              </v-btn>
+            </div>
+             <div class="d-flex d-md-none ga-5 flex-column justify-center py-5">
               <v-btn class="rounded-xl d-flex align-center btn-no-custom">
                 No 😕
               </v-btn>
@@ -133,6 +193,12 @@ body {
   position: absolute;
   top: 50%;
   width: 50vw;
+  background: linear-gradient(to right, #f8ebe8, #ecd6d0, #ff9a9dbd);
+}
+
+.card-mob {
+  position: absolute;
+  top: 40%;
   background: linear-gradient(to right, #f8ebe8, #ecd6d0, #ff9a9dbd);
 }
 

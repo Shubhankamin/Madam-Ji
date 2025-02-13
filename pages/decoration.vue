@@ -1,11 +1,25 @@
 <template>
-  <div class="overflow-hidden">
+  <div class="overflow-x-hidden">
     <!-- FIRST DIV -->
     <div v-if="isVisible" :class="{ 'dark-background': isDarkMode }">
       <v-row justify="center">
         <v-col cols="12" sm="8" md="6" lg="4" class="d-flex justify-center">
           <v-card
-            class="text-center card-1 pa-4"
+            class="text-center card-1 d-none d-md-flex flex-column pa-4"
+            :class="{ 'slide-up-leave': isHiding }"
+            elevation="2"
+          >
+            <v-row class="justify-center">
+              <v-col cols="2">
+                <v-icon size="60" color="#e8b923">mdi-creation-outline</v-icon>
+              </v-col>
+            </v-row>
+            <v-card-text class="text-h5 font-weight-bold text-wrap py-5">
+              Have a look at it Madam Jiii!!😌
+            </v-card-text>
+          </v-card>
+          <v-card
+            class="text-center card-1-mob d-flex d-md-none flex-column pa-4 mx-10"
             :class="{ 'slide-up-leave': isHiding }"
             elevation="2"
           >
@@ -59,17 +73,31 @@
     <div v-if="decoDiv" class="deco">
       <!-- Balloon row 1 -->
       <v-row
-        class="justify-space-between px-16 mx-10"
+        class="justify-space-between px-16 mx-10 d-none d-md-flex"
         :class="{ 'fade-in': showBalloons, hidden: !showBalloons }"
       >
-        <v-col cols="3">
+        <v-col cols="6" md="3">
           <v-img src="/images/balloon-1.png"></v-img>
         </v-col>
-        <v-col cols="3">
+        <v-col cols="12" md="3">
           <v-img src="/images/birthday-text.png"></v-img>
         </v-col>
-        <v-col cols="3">
+        <v-col cols="6" md="3">
           <v-img src="/images/balloon-1.png"></v-img>
+        </v-col>
+      </v-row>
+      <v-row
+        class="justify-center d-flex d-md-none"
+        :class="{ 'fade-in': showBalloons, hidden: !showBalloons }"
+      >
+        <v-col cols="6" md="3">
+          <v-img src="/images/balloon-1.png"></v-img>
+        </v-col>
+        <v-col cols="6" md="3">
+          <v-img src="/images/balloon-1.png"></v-img>
+        </v-col>
+        <v-col cols="8" md="3">
+          <v-img src="/images/birthday-text.png"></v-img>
         </v-col>
       </v-row>
       <v-row v-if="!showBalloons">
@@ -116,14 +144,14 @@
         </v-col>
       </v-row>
 
-      <v-row v-if="showPics">
+      <v-row v-if="showPics" class="overflow-scroll">
         <v-col
           v-for="(pic, index) in pics"
           :key="index"
           :class="[
             'd-flex justify-center',
             { 'fade-in': showPics && showPics[index] },
-            { 'mt-16 pt-10': index === 1 || index === pics.length - 1 }, // Apply mt-16 and pt-10 to the second and last cards
+            { 'mt-md-16 pt-md-10': index === 1 || index === pics.length - 1 }, // Apply mt-16 and pt-10 to the second and last cards
           ]"
         >
           <div class="card">
@@ -248,6 +276,12 @@ const pics = [
   position: absolute;
   top: 50%;
   width: 50vw;
+  background: linear-gradient(to right, #f8ebe8, #ecd6d0, #ff9a9dbd);
+}
+
+.card-1-mob {
+  position: absolute;
+  top: 50%;
   background: linear-gradient(to right, #f8ebe8, #ecd6d0, #ff9a9dbd);
 }
 
@@ -617,7 +651,7 @@ const pics = [
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  overflow: hidden !important;
+  overflow-x: hidden !important;
   z-index: -1;
 }
 
