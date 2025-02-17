@@ -77,13 +77,13 @@
         :class="{ 'fade-in': showBalloons, hidden: !showBalloons }"
       >
         <v-col cols="6" md="3">
-          <v-img src="/images/balloon-1.png"></v-img>
+          <v-img src="/images/balloon-1.png" lazy-src="/images/balloon-1.png"></v-img>
         </v-col>
         <v-col cols="12" md="3">
-          <v-img src="/images/birthday-text.png"></v-img>
+          <v-img src="/images/birthday-text.png" lazy-src="/images/birthday-text.png"></v-img>
         </v-col>
         <v-col cols="6" md="3">
-          <v-img src="/images/balloon-1.png"></v-img>
+          <v-img src="/images/balloon-1.png" lazy-src="/images/balloon-1.png"></v-img>
         </v-col>
       </v-row>
       <v-row
@@ -91,13 +91,13 @@
         :class="{ 'fade-in': showBalloons, hidden: !showBalloons }"
       >
         <v-col cols="6" md="3">
-          <v-img src="/images/balloon-1.png"></v-img>
+          <v-img src="/images/balloon-1.png" lazy-src="/images/balloon-1.png"></v-img>
         </v-col>
         <v-col cols="6" md="3">
-          <v-img src="/images/balloon-1.png"></v-img>
+          <v-img src="/images/balloon-1.png" lazy-src="/images/balloon-1.png"></v-img>
         </v-col>
         <v-col cols="8" md="3">
-          <v-img src="/images/birthday-text.png"></v-img>
+          <v-img src="/images/birthday-text.png" lazy-src="/images/balloon-1.png"></v-img>
         </v-col>
       </v-row>
       <v-row v-if="!showBalloons">
@@ -647,7 +647,7 @@ const pics = [
 }
 
 .deco {
-  background-image: url("/images/bday-bg.jpg");
+  background-image: url("/images/bday-bg-2.jpg");
   height: 100vh;
   width: 100vw;
   background-size: cover;
