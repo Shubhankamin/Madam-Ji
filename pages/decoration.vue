@@ -144,18 +144,18 @@
         </v-col>
       </v-row>
 
-      <v-row v-if="showPics" class="overflow-scroll">
+      <v-row v-if="showPics">
         <v-col
           v-for="(pic, index) in pics"
           :key="index"
           :class="[
             'd-flex justify-center',
-            { 'fade-in': showPics && showPics[index] },
+            { 'fade-in': showPics },
             { 'mt-md-16 pt-md-10': index === 1 || index === pics.length - 1 }, // Apply mt-16 and pt-10 to the second and last cards
           ]"
         >
           <div class="card">
-            <v-img :src="pic.src" cover></v-img>
+            <v-img :src="pic.src" cover :lazy-src="pic.src"></v-img>
             <div class="card__content">
               <p class="card__title">{{ pic.title }}</p>
               <p class="card__description">{{ pic.description }}</p>
@@ -166,13 +166,13 @@
       <!-- Balloon row 2 -->
 
       <v-row
-        class="justify-space-between px-16 mx-10"
-        :class="{ 'fade-in-new': showBalloons, hidden: !showBalloons }"
+        class="justify-space-between px-md-16 mx-md-10"
+        :class="{ 'fade-in': showBalloons, hidden: !showBalloons }"
       >
-        <v-col cols="3">
+        <v-col cols="6" md="3">
           <v-img src="/images/balloon-1.png"></v-img>
         </v-col>
-        <v-col cols="3">
+        <v-col cols="6" md="3">
           <v-img src="/images/balloon-1.png"></v-img>
         </v-col>
       </v-row>
@@ -197,7 +197,7 @@ const showPics = ref(false);
 
 onMounted(() => {
   // Initialize audio on mounted lifecycle hook
-  audio = new Audio("/audio/birthday.mp3");
+  audio = new Audio("/audio/bl-aud.mp3");
 
   setTimeout(() => {
     isHiding.value = true;
@@ -214,7 +214,7 @@ const playMusic = () => {
   showAudio.value = false;
   setTimeout(() => {
     showPics.value = true; // Start showing the pictures after some time
-  }, 1000);
+  }, 800);
 };
 
 const addDeco = () => {
@@ -653,6 +653,7 @@ const pics = [
   background-size: cover;
   overflow-x: hidden !important;
   z-index: -1;
+  
 }
 
 /* From Uiverse.io by alexmaracinaru */
