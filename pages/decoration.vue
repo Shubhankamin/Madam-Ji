@@ -102,7 +102,7 @@
       </v-row>
       <v-row v-if="!showBalloons">
         <v-col class="pt-10 d-flex flex-column align-center">
-          <p class="deco-text">Need Some Balloons ??</p>
+          <p class="deco-text">Add Some Balloons ??</p>
           <div>
             <button class="cta" @click="addBalloons">
               <span>Add</span>
@@ -157,7 +157,6 @@
           <div class="card">
             <v-img :src="pic.src" cover :lazy-src="pic.src"></v-img>
             <div class="card__content">
-              <p class="card__title">{{ pic.title }}</p>
               <p class="card__description">{{ pic.description }}</p>
             </div>
           </div>
@@ -242,23 +241,19 @@ const toggleMode = () => {
 const pics = [
   {
     src: "/images/her1.jpg",
-    title: "Card Title 1",
-    description: "Lorem ipsum dolor sit amet.",
+    description: "Happy Birthday to the most fantabulous amazing beautiful woman in the whole universe/multiverse",
   },
   {
-    src: "/images/her2.jpg",
-    title: "Card Title 2",
-    description: "Lorem ipsum dolor sit amet.",
+    src: "/images/her-5.jpg",
+    description: "I wish you a lots and lots of happiness, love and success. Hope everything that you've dreamed of come true",
   },
   {
-    src: "/images/her3.jpeg",
-    title: "Card Title 3",
-    description: "Lorem ipsum dolor sit amet.",
+    src: "/images/her-4.jpg",
+    description: "On this day I hope you know how amazing you are how you light up the world and with kindness",
   },
   {
     src: "/images/her1.jpg",
-    title: "Card Title 4",
-    description: "Lorem ipsum dolor sit amet.",
+    description: "Lastly thank you for everything I hope you don't stop kaleshi with me forever and ever ukwim. Wishing you lots of love again happy Birthday!",
   },
 ];
 </script>
@@ -1025,7 +1020,7 @@ const pics = [
 
 .card__description {
   margin: 10px 0 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #777;
   line-height: 1.4;
 }

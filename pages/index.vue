@@ -13,8 +13,11 @@
       <div><i class="fa fa-heart fa-5x"></i></div>
     </div>
     <v-row justify="center">
-      <v-col cols="12" sm="8" md="6" lg="4" class="d-flex justify-center" >
-        <v-card class="text-center card d-none d-md-flex flex-column pa-4" elevation="2">
+      <v-col cols="12" sm="8" md="6" lg="4" class="d-flex justify-center">
+        <v-card
+          class="text-center card d-none d-md-flex flex-column pa-4"
+          elevation="2"
+        >
           <v-row class="justify-center">
             <v-col cols="12" md="2">
               <v-icon size="60" color="#e8b923">mdi-creation-outline</v-icon>
@@ -49,7 +52,7 @@
                 Yes 😉
               </v-btn>
             </div>
-             <div class="d-flex d-md-none ga-5 flex-column justify-center py-5">
+            <div class="d-flex d-md-none ga-5 flex-column justify-center py-5">
               <v-btn class="rounded-xl d-flex align-center btn-no-custom">
                 No 😕
               </v-btn>
@@ -63,7 +66,10 @@
           </div>
         </v-card>
 
-          <v-card class="text-center card-mob d-flex d-md-none mx-10 flex-column pa-4" elevation="2">
+        <v-card
+          class="text-center card-mob d-flex d-md-none mx-10 flex-column pa-4"
+          elevation="2"
+        >
           <v-row class="justify-center">
             <v-col cols="12" md="2">
               <v-icon size="60" color="#e8b923">mdi-creation-outline</v-icon>
@@ -88,8 +94,11 @@
               Do You Want To See What I Made For You??
             </v-card-text>
             <div class="d-none d-md-flex ga-5 justify-center py-5">
-              <v-btn class="rounded-xl d-flex align-center btn-no-custom">
-                No 😕
+              <v-btn
+                class="rounded-xl d-flex align-center btn-no-custom"
+                @click="goToDeco"
+              >
+                Yes 😕
               </v-btn>
               <v-btn
                 class="rounded-xl d-flex align-center btn-custom"
@@ -98,9 +107,12 @@
                 Yes 😉
               </v-btn>
             </div>
-             <div class="d-flex d-md-none ga-5 flex-column justify-center py-5">
-              <v-btn class="rounded-xl d-flex align-center btn-no-custom">
-                No 😕
+            <div class="d-flex d-md-none ga-5 flex-column justify-center py-5">
+              <v-btn
+                class="rounded-xl d-flex align-center btn-no-custom"
+                @click="goToDeco"
+              >
+                Yes 😕
               </v-btn>
               <v-btn
                 class="rounded-xl d-flex align-center btn-custom"
