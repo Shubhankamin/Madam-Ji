@@ -43,7 +43,7 @@
             </v-card-text>
             <div class="d-none d-md-flex ga-5 justify-center py-5">
               <v-btn class="rounded-xl d-flex align-center btn-no-custom">
-                No 😕
+                Yes 😕
               </v-btn>
               <v-btn
                 class="rounded-xl d-flex align-center btn-custom"
