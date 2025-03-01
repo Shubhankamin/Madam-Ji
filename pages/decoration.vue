@@ -244,7 +244,7 @@ const pics = [
     description: "Happy Birthday to the most fantabulous amazing beautiful woman in the whole universe/multiverse",
   },
   {
-    src: "/images/her-5.jpg",
+    src: "/images/her-6.jpeg",
     description: "I wish you a lots and lots of happiness, love and success. Hope everything that you've dreamed of come true",
   },
   {
@@ -252,8 +252,8 @@ const pics = [
     description: "On this day I hope you know how amazing you are how you light up the world and with kindness",
   },
   {
-    src: "/images/her1.jpg",
-    description: "Lastly thank you for everything I hope you don't stop kaleshi with me forever and ever ukwim. Wishing you lots of love again happy Birthday!",
+    src: "/images/her-7.jpeg",
+    description: "Lastly thank you for everything I hope you don't stop kaleshi with me forever and ever ukwim. Wishing you lots of love again happy Birthday!. I love you",
   },
 ];
 </script>
